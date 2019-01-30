@@ -3,7 +3,7 @@
 require __DIR__ . '/functions.php';
 
 $monsters = getMonstersObjet();
-
+var_dump($monsters);
 ?>
 
 <!DOCTYPE html>
@@ -74,7 +74,7 @@ $monsters = getMonstersObjet();
                         <select class=" form-control" name="first_monster_name">
                             <option value="">Choose a Monster</option>
                             <?php foreach ($monsters as $key => $monster) { ?>
-                                <option value="<?php echo $key; ?>"><?php echo $monster['name']; ?></option>
+                                <option value="<?php echo $key; ?>"><?php echo $monster->getname(); ?></option>
                             <?php } ?>
                         </select>
                         <br>
@@ -83,7 +83,7 @@ $monsters = getMonstersObjet();
                         <select class="form-control" name="second_monster_name">
                             <option value="">Choose a Monster</option>
                             <?php foreach ($monsters as $key => $monster) { ?>
-                                <option value="<?php echo $key; ?>"> <?php echo $monster['name']; ?></option>
+                                <option value="<?php echo $key; ?>"> <?php echo $monster->getname(); ?></option>
                             <?php } ?>
                         </select>
                         <br>
