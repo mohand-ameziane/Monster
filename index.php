@@ -1,7 +1,5 @@
 <?php
-
 require __DIR__ . '/functions.php';
-
 $monsters = getMonstersObjet();
 var_dump($monsters);
 ?>
@@ -18,6 +16,9 @@ var_dump($monsters);
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     </head>
     <body>
+    <main>
+    <input type="button" class="btn btn-md btn-danger center-block" type="submit" value="ajoute un monster" onclick="document.location.href='./AjouteMonste.php';">
+    </main>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">Monsters League</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

@@ -1,9 +1,6 @@
-
 <?php
 require __DIR__ . '/monster.php';
-
 // on va faire avec les  tableau objet ou lieu de tableau
-
 function getMonstersObjet(){
     $monster1 =new Monster();
     $monster1->setname('Domovai');
@@ -28,14 +25,12 @@ function getMonstersObjet(){
     $monster4->setlastName('250');
     $monster4->setage('1500');
     $monster4->setcolor('fire');   
-
     $monsters = getMonsters();
     $monstersObjet = array();
      
     
     $monsterObjet= array($monster1, $monster2, $monster3, $monster4);
     
-
     return $monsterObjet;
 }
 // avec les tableau 
@@ -68,8 +63,6 @@ function getMonsters()
         ],
     ];
 }
-
-
 /**
  * Our complex fighting algorithm!
  *
@@ -79,12 +72,10 @@ function fight(array $firstMonster, array $secondMonster)
 {
     $firstMonsterLife = $firstMonster['life'];
     $secondMonsterLife = $secondMonster['life'];
-
     while ($firstMonsterLife > 0 && $secondMonsterLife > 0) {
         $firstMonsterLife = $firstMonsterLife - $secondMonster['strength'];
         $secondMonsterLife = $secondMonsterLife - $firstMonster['strength'];
     }
-
     if ($firstMonsterLife <= 0 && $secondMonsterLife <= 0) {
         $winner = null;
         $looser = null;
@@ -95,7 +86,6 @@ function fight(array $firstMonster, array $secondMonster)
         $winner = $firstMonster;
         $looser = $secondMonster;
     }
-
     return array(
         'winner' => $winner,
         'looser' => $looser,

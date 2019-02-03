@@ -2,6 +2,7 @@
 // verifier que post fonction bien 
 var_dump($_POST);
 // itablire la connexion avec ma base 
+
 $mabasa=new PDO('mysql:host=localhost; dbname=bdd_json','root','Mama2406');
 
 // faire la requete 
@@ -14,7 +15,7 @@ $pd = $mabasa->prepare('INSERT INTO bdd_json VALUES (NULL, :nom, :age, :weight, 
       $pd->bindValue(':bio', $_POST['bio'], PDO:: PARAM_STR);
       $pd->bindValue(':filename', $_POST['filename'], PDO:: PARAM_STR);
       
-     // execute la requete prepare
+     // execute la requete prepare s
      $pd->execute();
     
 ?>
